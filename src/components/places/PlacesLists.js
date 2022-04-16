@@ -1,9 +1,12 @@
 import React from 'react'
 import { FlatList, StyleSheet, Text, View } from 'react-native'
+import { Colors } from '../../constants/colors'
 import PlaceItem from './PlaceItem'
 
-const PlacesLists = ({places}) => {
-  !places || places.length === 0 && <View style={styles.container}><Text style={styles.fallBackText}>No places Added Yet !</Text></View>
+const PlacesLists = ({places=[]}) => {
+  if(!places || places.length === 0) return <View style={styles.container}>
+                                              <Text style={styles.fallBackText}>No places Added Yet !</Text>
+                                            </View>
   const renderHandler = (data) =>{
     return <PlaceItem place={data.item} onSelect={()=>{}}/>
   }
@@ -16,7 +19,7 @@ const styles = StyleSheet.create({
     justifyContent:'center', alignItems:'center',
   },
   fallBackText:{
-    fontSize:16
-  }
+    fontSize:16,
+    color:Colors.primary100,  }
 })
 export default PlacesLists
