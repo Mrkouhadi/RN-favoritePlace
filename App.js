@@ -7,7 +7,7 @@ import { StatusBar } from 'react-native';
 import AddPlace from './src/screens/AddPlace';
 import AllPlaces from './src/screens/AllPlaces';
 import IconBtn from './src/components/ui/IconBtn';
-
+import {Colors} from './src/constants/colors';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,7 +16,13 @@ const App  = () => {
   return <>
           <StatusBar style='dark' />
           <NavigationContainer>
-            <Stack.Navigator>
+            <Stack.Navigator
+              screenOptions={{
+                headerStyle:{ backgroundColor:Colors.primary500,},
+                headerTintColor:Colors.gray700,
+                contentStyle:{backgroundColor:Colors.gray700},
+              }}
+            >
                 <Stack.Screen name="AllPlaces"  component={AllPlaces} 
                   options={({navigation})=>({
                     title:'Your Favorite Places',
