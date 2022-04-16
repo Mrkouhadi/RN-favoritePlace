@@ -17,10 +17,20 @@ const App  = () => {
           <StatusBar style='dark' />
           <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="AllPlaces"  component={AllPlaces} options={{
-                  headerRight:({tintColor})=><IconBtn icon="plus-circle-outline" size={25} color={tintColor} />
-                }}/>
-                <Stack.Screen name="AddPlace"  component={AddPlace}/>
+                <Stack.Screen name="AllPlaces"  component={AllPlaces} 
+                  options={({navigation})=>({
+                    title:'Your Favorite Places',
+                    headerRight:({tintColor})=><IconBtn icon="plus-circle-outline"
+                                                        size={25} color={tintColor}
+                                                        onPress={()=>navigation.navigate("AddPlace")}
+                                               />
+                })}/>
+                <Stack.Screen name="AddPlace" component={AddPlace}
+                              options={{
+                                title:'Add a New Place',
+                                presentation:'modal' // default:card,modal, formSheet, containedModal,containedTransparentModal,transparentModal,fullScreenModal
+                              }}
+                />
             </Stack.Navigator>
           </NavigationContainer>
         </>
