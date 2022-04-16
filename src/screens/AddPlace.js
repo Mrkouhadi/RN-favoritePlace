@@ -1,9 +1,10 @@
 import React from 'react'
 import { Text, View } from 'react-native'
+import PlaceForm from '../components/places/PlaceForm'
 
 const AddPlace = () => {
   return (
-    <View><Text> Add your favorite place here !</Text></View>
+    <PlaceForm />
   )
 }
 
