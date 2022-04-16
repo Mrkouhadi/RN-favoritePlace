@@ -1,0 +1,2 @@
+### React-native app named FavoritePlace
+A mobile app (ios & android) named favoritePlace; it is simply an app that let users take picture of a place and registered as favorite with location,title,address and image of course
