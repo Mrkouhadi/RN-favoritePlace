@@ -1,4 +1,5 @@
 ///////////// set up /////////////
+// https://github.com/ivpusic/react-native-image-crop-picker
 // npm i react-native-image-crop-picker --save
 // ios
     // cd ios 
@@ -42,4 +43,24 @@
         //     <uses-permission android:name="android.permission.CAMERA"/>
         //     <uses-feature android:name="android.hardware.camera" android:required="false" />
         //     <uses-feature android:name="android.hardware.camera.front" android:required="false" /> 
+
 // usage
+        // import ImagePicker from 'react-native-image-crop-picker';
+        // const takePhotoHandler = () =>{
+        //     ImagePicker.openCamera({
+        //         width: 300,
+        //         height: 400,
+        //         cropping: true,
+        //     }).then(image => {
+        //         console.log(image);
+        //     });
+        // }
+        // const selectPhotoHandler = () =>{
+        //     ImagePicker.openPicker({
+        //         width: 300,
+        //         height: 400,
+        //         cropping: true
+        //     }).then(image => {
+        //         console.log(image);
+        //     });
+        // }
