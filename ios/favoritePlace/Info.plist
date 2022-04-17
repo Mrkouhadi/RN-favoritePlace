@@ -44,6 +44,10 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+    <string>FavoritePlace requires your permission to your gallery !</string>
+    <key>NSCameraUsageDescription</key>
+    <string>FavoritePlace requires your permission to use Camera</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
