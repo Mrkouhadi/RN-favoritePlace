@@ -16,6 +16,7 @@ const PlaceForm = () => {
                          onChangeText={changeTitleHandler} 
                          value={title}
               />
+            <Text style={styles.label}>Image :</Text>
             <ImgPicker/>
             </View>
          </ScrollView>

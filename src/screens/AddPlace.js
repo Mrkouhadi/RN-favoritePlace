@@ -4,12 +4,7 @@ import { Button } from 'react-native'
 import PlaceForm from '../components/places/PlaceForm'
 
 const AddPlace = ({navigation}) => {
-  return (
-    <>
-    <Button title="go back" color='red' onPress={()=> navigation.navigate('AllPlaces')}/>
-    <PlaceForm />
-    </>
-  )
+  return <PlaceForm />
 }
 
 export default AddPlace
