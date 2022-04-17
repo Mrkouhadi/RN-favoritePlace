@@ -34,7 +34,7 @@ const App  = () => {
                 <Stack.Screen name="AddPlace" component={AddPlace}
                               options={{
                                 title:'Add a New Place',
-                                presentation:'modal' // default:card,modal, formSheet, containedModal,containedTransparentModal,transparentModal,fullScreenModal
+                                // presentation:'modal' // default:card,modal, formSheet, containedModal,containedTransparentModal,transparentModal,fullScreenModal
                               }}
                 />
             </Stack.Navigator>

@@ -12,7 +12,9 @@ const PlaceForm = () => {
             <View>
               <Text style={styles.label}>Title :</Text>
               <TextInput style={styles.input}
-                  onChangeText={changeTitleHandler} value={title}/>
+                         onChangeText={changeTitleHandler} 
+                         value={title}
+              />
             </View>
          </ScrollView>
 }
