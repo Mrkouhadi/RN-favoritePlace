@@ -12,7 +12,7 @@ const ImgPicker = () => {
             compressImageMaxHeight:300,
             compressImageMaxWidth:300,
             cropping: true,
-            compressImageQuality:.7,
+            compressImageQuality:.9,
           }).then(image => {
             setImg(image.path);
           });
@@ -23,7 +23,8 @@ const ImgPicker = () => {
             // height: 400,
             compressImageMaxHeight:300,
             compressImageMaxWidth:300,
-            cropping: true
+            cropping: true,
+            // multiple:true,
           }).then(image => {
             setImg(image.path);
           });
