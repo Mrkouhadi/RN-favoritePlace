@@ -1,28 +1,29 @@
 import React from 'react'
 import { View, Button} from 'react-native'
-import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
+import ImagePicker from 'react-native-image-crop-picker';
+const ImgPicker = () => {
 
-const ImagePicker = () => {
-
-    const openCam = ()=>{
-        const options = {
-            mediaType:'photo',
-            quality:1,
-        }
-        launchCamera(options, res=>{
-            if(res.didCancel){
-                console.log('User cancelled using Camera');
-            }else if(res.errorCode){
-                console.log(res.errorCode);
-            }else{
-                const data = res.assets;
-                console.log(data);
-            }
-        })
+    const takePhotoHandler = () =>{
+        ImagePicker.openCamera({
+            width: 300,
+            height: 400,
+            cropping: true,
+          }).then(image => {
+            console.log(image);
+          });
+    }
+    const selectPhotoHandler = () =>{
+        ImagePicker.openPicker({
+            width: 300,
+            height: 400,
+            cropping: true
+          }).then(image => {
+            console.log(image);
+          });
     }
     return <View>
-                <Button onPress={openCam} title="open Camera" color="pink"/>
+              <Button onPress={takePhotoHandler} title="Take a Photo" color="pink"/>
+              <Button onPress={selectPhotoHandler} title="Select From Gallery" color="pink"/>
            </View>
 }
-
-export default ImagePicker
+export default ImgPicker
