@@ -19,8 +19,10 @@ const ImgPicker = () => {
     }
     const selectPhotoHandler = () =>{
         ImagePicker.openPicker({
-            width: 300,
-            height: 400,
+            // width: 300,
+            // height: 400,
+            compressImageMaxHeight:300,
+            compressImageMaxWidth:300,
             cropping: true
           }).then(image => {
             setImg(image.path);
