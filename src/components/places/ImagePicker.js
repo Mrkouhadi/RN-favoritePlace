@@ -80,5 +80,6 @@ const styles= StyleSheet.create({
         fontSize:20, color:'white', 
         letterSpacing:2, fontWeight:'bold'
     }
-})
+});
+
 export default ImgPicker
