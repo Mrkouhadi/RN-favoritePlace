@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { Colors } from '../../constants/colors';
 import ImgPicker from './ImagePicker';
+import LocationPicker from './LocationPicker';
 
 const PlaceForm = () => {
   const [title, setTitle] = useState('');
@@ -11,7 +12,7 @@ const PlaceForm = () => {
   };
 
   return <ScrollView style={styles.form}>
-            <View>
+          <View style={{marginBottom:100}}> 
               <Text style={styles.label}>Title :</Text>
               <TextInput style={styles.input} placeholder="Type a title for your place"
                          onChangeText={changeTitleHandler} 
@@ -19,7 +20,9 @@ const PlaceForm = () => {
               />
             <Text style={styles.label}>Image :</Text>
             <ImgPicker/>
-            </View>
+            <Text style={styles.label}>Location :</Text>
+            <LocationPicker/>
+          </View>
          </ScrollView>
 }
 const styles = StyleSheet.create({
