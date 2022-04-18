@@ -42,10 +42,10 @@ const ImgPicker = () => {
                 }
               </View>
                 <View style={styles.btns}>
-                    <OutlineBtn onPress={takePhotoHandler} icon="camera" size={20} color={Colors.primary500} >
+                    <OutlineBtn onPress={takePhotoHandler} icon="camera" size={25} color={Colors.primary500} >
                         Take an Picture
                     </OutlineBtn>
-                    <OutlineBtn onPress={selectPhotoHandler} icon="album" size={20} color={Colors.primary500} >
+                    <OutlineBtn onPress={selectPhotoHandler} icon="album" size={25} color={Colors.primary500} >
                         Select an Image
                     </OutlineBtn>
                 </View>
