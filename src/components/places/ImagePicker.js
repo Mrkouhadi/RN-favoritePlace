@@ -58,6 +58,7 @@ const styles= StyleSheet.create({
         overflow:'hidden',
     },
     imgBox:{
+        marginTop:8,
         width:"100%", flex:.95,
         borderRadius:10,
         justifyContent:'center', alignItems:'center',
