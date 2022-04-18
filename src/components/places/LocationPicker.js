@@ -15,8 +15,8 @@ const LocationPicker = () => {
 
             </View>
             <View style={styles.actions}>
-                <OutlineBtn onPress={locateUserHandler} icon='location'>Locate The User</OutlineBtn>
-                <OutlineBtn onPress={pickOnMapHandler} icon="map">Pick On Map</OutlineBtn>
+                <OutlineBtn onPress={locateUserHandler} color={Colors.primary500} size={25} icon='google-maps'>Locate The User</OutlineBtn>
+                <OutlineBtn onPress={pickOnMapHandler} color={Colors.primary500} size={25} icon="map-legend">Pick On Map</OutlineBtn>
             </View>
          </View>
 }
