@@ -60,22 +60,18 @@ const styles= StyleSheet.create({
     imgBox:{
         marginTop:8,
         width:"100%", flex:.95,
-        borderRadius:10,
+        borderRadius:5,
         justifyContent:'center', alignItems:'center',
         overflow:'hidden',
     },
-    btn:{
-        borderRadius:10,
+    img:{
+        width:'100%', height:"100%",  
     },
     btns:{
         flexDirection:'row',
         alignItems:'center',
         justifyContent:'space-between',
         width:'100%'
-    },
-    img:{
-        width:'100%', height:"100%",         borderRadius:10,
-
     },
     imgFallbackText:{
         fontSize:20, color:'white', 
