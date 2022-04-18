@@ -35,8 +35,7 @@ const ImgPicker = () => {
     }
     return <View style={styles.container}>
               <View style={styles.imgBox}>
-                { 
-                  !!img ?    <Image style={styles.img}
+                { !!img ?    <Image style={styles.img}
                                   source={{uri:img}}
                             />
                         : <Text style={styles.imgFallbackText}>No image taken yet !</Text>
