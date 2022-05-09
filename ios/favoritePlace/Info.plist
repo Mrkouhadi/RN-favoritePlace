@@ -43,7 +43,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>FavoritePlace needs your permission in order use the map</string>
 	<key>NSPhotoLibraryUsageDescription</key>
     <string>FavoritePlace requires your permission to your gallery !</string>
     <key>NSCameraUsageDescription</key>
