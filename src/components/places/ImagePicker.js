@@ -4,7 +4,7 @@ import ImagePicker from 'react-native-image-crop-picker';
 import OutlineBtn from '../ui/OutlineBtn';
 import { Colors } from '../../constants/colors'
 
-const ImgPicker = () => {
+const ImgPicker = ({onTakeImage}) => {
     const [img, setImg] = useState();
     
     const takePhotoHandler = () =>{
@@ -28,9 +28,9 @@ const ImgPicker = () => {
             cropping: true,
             // multiple:true,
             // compressImageQuality:.7,
-
           }).then(image => {
             setImg(image.path);
+            onTakeImage(image.path)
           });
     }
     return <View style={styles.container}>
@@ -78,5 +78,4 @@ const styles= StyleSheet.create({
         letterSpacing:2, fontWeight:'bold'
     }
 });
-
 export default ImgPicker
