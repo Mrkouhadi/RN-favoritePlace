@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { Colors } from '../../constants/colors';
+import Button from '../ui/Button';
 import ImgPicker from './ImagePicker';
 import LocationPicker from './LocationPicker';
 
 const PlaceForm = () => {
   const [title, setTitle] = useState('');
+  const [pickedmage, setPickedImage] = useState();
 
   const changeTitleHandler = (enteredTitle)=>{
     setTitle(enteredTitle)
   };
-
+  const pickedImageHandler = (imgUri) =>{
+    setPickedImage(imgUri);
+  }
   return <ScrollView style={styles.form}>
           <View style={{marginBottom:100}}> 
               <Text style={styles.label}>Title :</Text>
@@ -19,9 +23,10 @@ const PlaceForm = () => {
                          value={title}
               />
             <Text style={styles.label}>Image :</Text>
-            <ImgPicker/>
+            <ImgPicker onTakeImage={pickedImageHandler}/>
             <Text style={styles.label}>Location :</Text>
             <LocationPicker/>
+            <Button>Submit</Button>
           </View>
          </ScrollView>
 }
