@@ -40,3 +40,17 @@ const init=()=>{
     const inserUserHanlder = async (name,age) => {  // inside the form component
         await insertUser(name, age);
     };
+        // data fetching
+        const fetchUsers = () =>{
+            const promise = new Promise((resolve, reject) =>{
+                db.transaction((tx) =>{
+                    tx.executeSql(
+                        "SELECT * FROM Users",
+                        [],
+                        (_, result)=>resolve(result.rows._array), // u can also log the result
+                        (_,error) => reject(error)
+                    )
+                })
+            })
+            return promise;
+        }
