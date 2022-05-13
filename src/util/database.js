@@ -2,7 +2,7 @@ import * as sqlite from 'sqlite'
 
 const db = sqlite.openDatabase('images.db')
 
-const init=()=>{
+export const init=()=>{
     const promise = new Promise((resolve, reject)=>{
         db.transaction(tx =>{
             tx.executeSql(
