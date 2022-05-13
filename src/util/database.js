@@ -21,7 +21,7 @@ const init=()=>{
 }
 
     // Data insertion
-    const insertUser = (name, age) =>{
+    export const insertUser = (name, age) =>{
         const promise = new Promise((resolve, reject)=>{
             db.transaction(tx =>{
                 tx.executeSql(
@@ -37,11 +37,8 @@ const init=()=>{
         })
         return promise;
     };
-    const inserUserHanlder = async (name,age) => {  // inside the form component
-        await insertUser(name, age);
-    };
         // data fetching
-        const fetchUsers = () =>{
+       export const fetchUsers = () =>{
             const promise = new Promise((resolve, reject) =>{
                 db.transaction((tx) =>{
                     tx.executeSql(
