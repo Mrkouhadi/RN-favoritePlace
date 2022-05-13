@@ -6,7 +6,7 @@ const init=()=>{
     const promise = new Promise((resolve, reject)=>{
         db.transaction(tx =>{
             tx.executeSql(
-                "CREATE TABLE.......",
+                "CREATE TABLE IF NOT EXISTS Users(ID INTEGER PRIMARY KEY AUTOINCREMENT,Name TEXT, Age INTEGER)",
                 [],
                 ()=>{
                     resolve()
